@@ -24,6 +24,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 */
+// Code Inspired by https://gameoflife.pro/
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -49,13 +51,14 @@ namespace GameOfLife
             int[,] neighborsGrid = CalculateNeighbors(grid, width, hight); //get the Neighbor count on each cell
 
             var nextGrid = new int[width, hight];
+
             for (int Y = 0; Y < hight; Y++)
             {
                 for (int X = 0; X < width; X++)
                 {
                     int currentCell = grid[X, Y];
                     int neighbors = neighborsGrid[X, Y];
-
+                    //The Rules
                     if (currentCell == 1)
                     { //if on
                         if (neighbors == 1) { currentCell = 0; } //has only 1 neighbors then it turns OFF in the next turn. (SOLITUDE)

@@ -24,12 +24,15 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 */
+// Code Inspired by https://gameoflife.pro/
 using System;
 using System.Threading;
 using GameOfLife;
 
 namespace GameOfLifeOnConsole
 {
+    //this is an example program
+    //see GameOfLife.cs for game logic implementation 
     class Program
     {
         public static int[,] startPattern = new int[16, 16]{
@@ -53,12 +56,12 @@ namespace GameOfLifeOnConsole
         static void Main(string[] args)
         {
            
-            GameOflife game = new GameOflife(startPattern);
+            GameOflife game = new GameOflife(startPattern); // New game instance is made
             Console.ForegroundColor = ConsoleColor.Green;
             for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(game.GameToString());
-                game.CalculateNextGen();
+                Console.WriteLine(game.GameToString());// Display its current state
+                game.CalculateNextGen(); // Calculate next state
                 Thread.Sleep(160);
                 Console.Clear();
             }
