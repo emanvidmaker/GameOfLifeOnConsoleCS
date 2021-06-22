@@ -62,7 +62,7 @@ namespace GameOfLifeOnConsole
                 Thread.Sleep(160);
                 Console.Clear();
             }
-            Console.WriteLine("Press any key to quit");
+            Console.WriteLine("Press Enter to quit");
             Console.ReadLine();
 
         }
