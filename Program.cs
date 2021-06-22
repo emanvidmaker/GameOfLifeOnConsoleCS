@@ -54,19 +54,20 @@ namespace GameOfLifeOnConsole
         {
            
             GameOflife game = new GameOflife(startPattern);
+            Console.ForegroundColor = ConsoleColor.Green;
             for (int i = 0; i < 100; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(game.GameToString());
                 game.CalculateNextGen();
                 Thread.Sleep(160);
                 Console.Clear();
-                
             }
+            Console.WriteLine("Press any key to quit");
+            Console.ReadLine();
 
         }
 
-        
+
     }
    
 }
