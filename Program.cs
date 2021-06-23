@@ -56,7 +56,7 @@ namespace GameOfLifeOnConsole
         static void Main(string[] args)
         {
            
-            GameOflife game = new GameOflife(startPattern); // New game instance is made
+            GameOfLifeClass game = new GameOfLifeClass(startPattern); // New game instance is made
             Console.ForegroundColor = ConsoleColor.Green;
             for (int i = 0; i < 100; i++)
             {
