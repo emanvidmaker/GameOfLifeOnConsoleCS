@@ -1,4 +1,4 @@
-﻿/*
+/*
  MIT License
 -----------
 
@@ -25,17 +25,17 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 */
 // Code Inspired by https://gameoflife.pro/
-
+// Git Repo: https://github.com/emanvidmaker/GameOfLifeOnConsoleCS
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameOfLife
 {
-    public class GameOflife
+    public class GameOfLifeClass
     {
         public int[,] gridPattern;
-        public GameOflife(int[,] gridPattern)
+        public GameOfLifeClass(int[,] gridPattern)
         {
             this.gridPattern = gridPattern;
         }
